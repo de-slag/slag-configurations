@@ -1,7 +1,7 @@
-<!-- this is a maven settings file -->
-
-<settings>
-	<localRepository>C:\dev\maven-repository</localRepository>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
+	<localRepository>${user.home}/.m2/repository</localRepository>
 
 	<activeProfiles>
 		<activeProfile>github</activeProfile>
@@ -11,9 +11,7 @@
 		<profile>
 			<id>github</id>
 			<repositories>
-        
-        <!--
-        <repository>
+				<repository>
 					<id>central</id>
 					<url>https://repo1.maven.org/maven2</url>
 					<releases>
@@ -23,12 +21,21 @@
 						<enabled>true</enabled>
 					</snapshots>
 				</repository>
-        -->
-				
-        <repository>
+				<repository>
 					<id>github</id>
 					<name>GitHub de-slag Apache Maven Packages</name>
-					<url>https://maven.pkg.github.com/de-slag</url>
+					<url>https://maven.pkg.github.com/de-slag/slag-common</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</repository>
+                                <repository>
+					<id>github-a4j</id>
+					<name>GitHub de-slag Apache Maven Packages</name>
+					<url>https://maven.pkg.github.com/de-slag/alphavantage4j</url>
 					<releases>
 						<enabled>true</enabled>
 					</releases>
@@ -44,10 +51,8 @@
 		<server>
 			<id>github</id>
 			<username>de-slag</username>
-    
-      <!-- a github personal access token with 'write:packages' rights -->
-			<password></password>
-		
-    </server>
+			<password>c37595bae89ba0596e5f20b5e53ee9dfd3744d8d</password>
+		</server>
 	</servers>
 </settings>
+
