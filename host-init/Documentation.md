@@ -7,6 +7,11 @@ git clone https://github.com/de-slag/slag-tools.git
 git clone https://github.com/de-slag/slag-configurations.git
 ln -s slag-tools/host-init/init-host.sh.latest ./init-host.sh
 ln -s slag-configurations/host-init/init-host.properties.latest ./init-host.properties
+
+echo "pre init complete. start init host."
+echo "hit ENTER to continue"
+read
+bash init-host.sh
 ```
 * run **pre-init.sh**:
 ```
