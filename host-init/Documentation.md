@@ -11,7 +11,7 @@ ln -s slag-configurations/host-init/init-host.properties.latest ./init-host.prop
 echo "pre init complete. start init host."
 echo "hit ENTER to continue"
 read
-bash init-host.sh
+bash ./init-host.sh
 ```
 * run **pre-init.sh**:
 ```
