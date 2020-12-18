@@ -5,7 +5,7 @@
 #### 2.1.1 Primary Data Server
 Name: uranus
 
-*Root data structure*
+*Root data structure v2021*
 
     backup - snapshots and backups
     data   - documents, media data, ... no: executables, configurations, 
