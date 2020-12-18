@@ -7,12 +7,14 @@ Name: uranus
 
 *Root data structure*
 
-    data - documents, media data, ... no: executables, configurations, 
-    tmp - temporary files of all kind. is deleted periodicly, no backup
-    vrt - images, containers, iso-files, gerenated start scripts
+    backup - snapshots and backups
+    data   - documents, media data, ... no: executables, configurations, 
+    tmp    - temporary files of all kind. is deleted periodicly, no backup
+    vrt    - hd-images, containers, iso-files, gerenated start scripts, ...
 
 #### 2.1.2 Backup Data Server
 Name: jupiter
+
 ### 2.2 VM-Host
 Name: merkur
 
