@@ -1,0 +1,23 @@
+# IT INFRASTRUCTURE
+## 1. Network
+## 2. Servers
+### 2.1 Data-Servers
+#### 2.1.1 Primary Data Server
+Name: uranus
+
+*Root data structure*
+
+    data - documents, media data, ... no: executables, configurations, 
+    tmp - temporary files of all kind. is deleted periodicly, no backup
+    vrt - images, containers, iso-files, gerenated start scripts
+
+#### 2.1.2 Backup Data Server
+Name: jupiter
+### 2.2 VM-Host
+Name: merkur
+
+## 3. Tools
+github repo: slag-tools
+
+## 4. Configurations
+github repo: slag-configurations
