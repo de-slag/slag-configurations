@@ -1,0 +1,5 @@
+uranus:/volume1/data		/mnt/data		nfs rw 0 0
+uranus:/volume1/backup		/mnt/backup		nfs rw 0 0
+uranus:/volume1/tmp		/mnt/tmp		nfs rw 0 0
+uranus:/volume1/vrt		/mnt/vrt		nfs rw 0 0
+jupiter:/backup-archive		/mnt/backup-archive	nfs ro 0 0
