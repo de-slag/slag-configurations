@@ -32,8 +32,8 @@ Damit die VMs im home-Netzwerk verfügbar sind, ist eine Netzwerkbrücke auf dem
     vrt/
       autostart/            # Symlinks auf Start-Scripte von mit dem VM-Host zu startenden Maschinen
       install/
-         installed.txt      # Liste mit allen installierten VM-Namen.
-         mac-addresses.txt  # Liste mit allen an VMs vergebenen MAC-Adressen
+        installed.txt       # Liste mit allen installierten VM-Namen.
+        mac-addresses.txt   # Liste mit allen an VMs vergebenen MAC-Adressen
       iso/                  # Iso-Dateien für die Installation eines VM-Vorlage-Images
       images/               # Img-Dateien zum kopieren für die Erzeugung einer neuen VMs
       init/                 # Init-Scripte zur erzeugen neuer VMs
@@ -52,8 +52,15 @@ Damit die VMs im home-Netzwerk verfügbar sind, ist eine Netzwerkbrücke auf dem
       log/                  # alle Log-Dateien
 
 ## Ablauf
+|Schritt|Input|Durchführung|Output|
+|---|---|---|---|
+|Installation OS|Installation-ISO|install-vm-os-wizard.sh|OS-Festpatten-Image|
+|Erstellung Init-Script| |host-setup-wizdard.sh|Init-Script|
+|Erzeugen VM|OS-Festplatten-Image, Init-Script|create-vm.sh|Lauffähige, vorkonfigurierte VM|
 
-### Installation
+
+
+### Installation OS
 * Installation einer VM von einem Linux-Installation-ISO per Installation-Start-Script (siehe slag-tools/bash/install-vm-wizard.sh)
 * Ausführen des folgenden Scripts zur Vorbereitung der Selbstinitialisierung auf der neuen VM. Das Script sollte unter ~/post-install.sh abgelegt werden.
 
