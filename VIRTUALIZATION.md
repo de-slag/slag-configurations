@@ -21,6 +21,9 @@ Der "Wert" der einzelnen Instanz soll durch die schnelle, einfache Erzeugung ver
 
 ## Durchführung
 
+### Hinweise
+* Die von der VM verwendeten Dateien .iso, .img müssen in einem von allen Benutzern beschreibbaren Verzeichnis liegen.
+
 ### VM-Host
 Die Virtualisierung erfolgt auf einem Ubuntu-Server (20.04) mittels KVM / QEMU. Für die Steuerung wird auf *virsh* zurückgegriffen.
 
@@ -37,7 +40,7 @@ Damit die VMs im home-Netzwerk verfügbar sind, ist eine Netzwerkbrücke auf dem
       iso/                  # Iso-Dateien für die Installation eines VM-Vorlage-Images
       images/               # Img-Dateien zum kopieren für die Erzeugung einer neuen VMs
       init/                 # Init-Scripte zur erzeugen neuer VMs
-      vm/                   
+      vm/
         pluto-4711/         
           hdd.img           # Festplattenimage oder...
           hdd.ovl           # ...Overlayimage
@@ -52,15 +55,17 @@ Damit die VMs im home-Netzwerk verfügbar sind, ist eine Netzwerkbrücke auf dem
       log/                  # alle Log-Dateien
 
 ## Ablauf
-|Schritt|Input|Durchführung|Output|
-|---|---|---|---|
-|Installation OS|Installation-ISO|install-vm-os-wizard.sh|OS-Festpatten-Image|
-|Erstellung Init-Script| |host-setup-wizdard.sh|Init-Script|
-|Erzeugen VM|OS-Festplatten-Image, Init-Script|create-vm.sh|Lauffähige, vorkonfigurierte VM|
+0. Installation OS
+0. Erstellung eines Init-Scriptes
+0. Einrichtung einer neuen VM
 
 
 
 ### Installation OS
+* Installation eines OS auf einem leeren Image durch slag-tools/bash/install-vm-os-wizard.sh
+
+
+
 * Installation einer VM von einem Linux-Installation-ISO per Installation-Start-Script (siehe slag-tools/bash/install-vm-wizard.sh)
 * Ausführen des folgenden Scripts zur Vorbereitung der Selbstinitialisierung auf der neuen VM. Das Script sollte unter ~/post-install.sh abgelegt werden.
 
