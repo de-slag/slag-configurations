@@ -64,6 +64,7 @@ Damit die VMs im home-Netzwerk verfügbar sind, ist eine Netzwerkbrücke auf dem
   * VM starten
   * VM initialisieren
     * Hostnamen setzen
+    * Installation und Konfiguration von Paketen und Anwendungen
   * VM neu starten
   * VM als 'erzeugt' markieren
 * VM löschen
