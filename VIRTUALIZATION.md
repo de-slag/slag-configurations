@@ -52,6 +52,16 @@ Damit die VMs im home-Netzwerk verfügbar sind, ist eine Netzwerkbrücke auf dem
       log/                  # alle Log-Dateien
 
 ## Ablauf
+
+0. Betriebssystem installieren
+0. VM instanziieren
+  0. Datenstruktur anlegen
+  0. HD-Image kopieren
+  0. Scripte generieren
+  0. VM erzeugen
+0. VM starten
+
+
 |Schritt|Input|Durchführung|Output|
 |---|---|---|---|
 |Installation OS|Installation-ISO|install-vm-os-wizard.sh|OS-Festpatten-Image|
