@@ -52,14 +52,30 @@ Damit die VMs im home-Netzwerk verfügbar sind, ist eine Netzwerkbrücke auf dem
       log/                  # alle Log-Dateien
 
 ## Ablauf
+*VM-Lifecycle:*
+* Betriebssystem installieren
+* VM instanziieren
+  * Datenstruktur anlegen
+  * HD-Image kopieren
+  * Scripte generieren/kopieren
+  * VM erzeugen
+    * MAC-Adresse als verbraucht registrieren
+    * VM-Namen als verbraucht registrieren 
+  * VM starten
+  * VM initialisieren
+    * Hostnamen setzen
+  * VM neu starten
+  * VM als 'erzeugt' markieren
+* VM löschen
+  * VM stoppen
+  * VM zerstören
+  * VM undefinieren 
+  * HD-Image löschen
+  * In Datenstruktur als gelöscht markieren
+* gelöschte VMs aufräumen
+  * Datenstrukturen gelöschter VMs löschen
 
-0. Betriebssystem installieren
-0. VM instanziieren
-  0. Datenstruktur anlegen
-  0. HD-Image kopieren
-  0. Scripte generieren
-  0. VM erzeugen
-0. VM starten
+ 
 
 
 |Schritt|Input|Durchführung|Output|
