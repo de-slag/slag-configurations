@@ -1,6 +1,11 @@
 # VIRTUALIZATION
 
-## PRÄMISSEN
+**Table of contents**
+1. [Vorbedingungen](#vorbedingungen)
+2. [Ziel](#ziel)
+3. [Durchführung](#durchführung)
+
+## Vorbedingungen
 Es werden nur Debian-Stable- und Ubuntu-LTS-Linux-Maschinen virtualisiert. Ein Überblick über die verwendeten Versionen zeigt die folgende Tabelle:
 
 |ab Jahr|Debian|Ubuntu|
@@ -10,7 +15,7 @@ Es werden nur Debian-Stable- und Ubuntu-LTS-Linux-Maschinen virtualisiert. Ein �
 |2021|11| |
 |2024| |24.04|
 
-## ZIEL
+## Ziel
 
 Die Virtualisierung in diesem Kontext soll helfen, schnell virtuelle Maschinen zu erzeugen, die:
 * einfach zu initalisieren sind
