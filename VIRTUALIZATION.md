@@ -55,9 +55,9 @@ Damit die VMs im home-Netzwerk verfügbar sind, ist eine Netzwerkbrücke auf dem
       log/                  # alle Log-Dateien
 
 ## Ablauf
-0. Installation OS
-0. Erstellung eines Init-Scriptes
-0. Einrichtung einer neuen VM
+0. Installation OS (vrt-install-os-wizard.sh)
+0. Erstellung eines Init-Scriptes (vrt-init-vm-wizard.sh)
+0. Einrichtung einer neuen VM (vrt-install-vm.sh)
 
 
 
