@@ -3,7 +3,9 @@
 **Table of contents**
 1. [Vorbedingungen](#vorbedingungen)
 2. [Ziel](#ziel)
-3. [Durchführung](#durchführung)
+2. [Durchführung](#durchführung)
+
+    3.1. [VM-Host](#vm-host)
 
 ## Vorbedingungen
 Es werden nur Debian-Stable- und Ubuntu-LTS-Linux-Maschinen virtualisiert. Ein Überblick über die verwendeten Versionen zeigt die folgende Tabelle:
