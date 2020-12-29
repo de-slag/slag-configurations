@@ -47,6 +47,7 @@ Damit die VMs im home-Netzwerk verfügbar sind, ist eine Netzwerkbrücke auf dem
       iso/                  # Iso-Dateien für die Installation eines VM-Vorlage-Images
       images/               # Img-Dateien zum kopieren für die Erzeugung einer neuen VMs
       init/                 # Init-Scripte zur erzeugen neuer VMs
+      inst/                 # instance.properties zum antriggern der Instanziierung einer neuen VM
       vm/
         pluto-4711/         
           hdd.img           # Festplattenimage oder...
@@ -102,8 +103,6 @@ Damit die VMs im home-Netzwerk verfügbar sind, ist eine Netzwerkbrücke auf dem
 ### Installation OS
 * Installation eines OS auf einem leeren Image durch slag-tools/bash/install-vm-os-wizard.sh
 
-
-
 * Installation einer VM von einem Linux-Installation-ISO per Installation-Start-Script (siehe slag-tools/bash/install-vm-wizard.sh)
 * Ausführen des folgenden Scripts zur Vorbereitung der Selbstinitialisierung auf der neuen VM. Das Script sollte unter ~/post-install.sh abgelegt werden.
 
@@ -144,6 +143,13 @@ Damit die VMs im home-Netzwerk verfügbar sind, ist eine Netzwerkbrücke auf dem
 * Ablage des erzeugten Init-Scripts in *vrt/init*
 
 ### Erzeugung der VM
+
+Beispiel einer *instance.properties*
+
+    image=ubuntu-server-20-04
+    size=small
+
+
 * Erzeugung der VM mittels Create-Script unter Verwendung einer Kopie der bei einer Installation erzeugten IMG-Datei.
 ** Anlage der Datenstruktur für diese VM
 * Starten der VM
