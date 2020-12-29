@@ -47,7 +47,7 @@ Damit die VMs im home-Netzwerk verfügbar sind, ist eine Netzwerkbrücke auf dem
       iso/                  # Iso-Dateien für die Installation eines VM-Vorlage-Images
       images/               # Img-Dateien zum kopieren für die Erzeugung einer neuen VMs
       init/                 # Init-Scripte zur erzeugen neuer VMs
-      inst/                 # instance.properties zum antriggern der Instanziierung einer neuen VM
+      inst/                 # instance*.properties zum antriggern der Instanziierung einer neuen VM
       vm/
         pluto-4711/         
           hdd.img           # Festplattenimage oder...
@@ -146,9 +146,14 @@ Damit die VMs im home-Netzwerk verfügbar sind, ist eine Netzwerkbrücke auf dem
 
 Beispiel einer *instance.properties*
 
+    # Image Name from images-dir without file extension
     image=ubuntu-server-20-04
+    #
+    # sizes have to be defined in config file
     size=small
-
+    #
+    # a free comment, I.e. purpose
+    comment=
 
 * Erzeugung der VM mittels Create-Script unter Verwendung einer Kopie der bei einer Installation erzeugten IMG-Datei.
 ** Anlage der Datenstruktur für diese VM
