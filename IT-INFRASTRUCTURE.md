@@ -24,59 +24,68 @@ Plutoids
      pluto-a .. pluto-z    - machines to test VM behaviour
      pluto-0 .. pluto-nnn  - machines to develop, test and be productive
 
-
 ### 2.1 Data-Servers
 
-*Data Areas*
-
-    backup         - snapshots and backups
-    backup-archive - long-term archive of backups, 
-    data           - documents, media data, ... no: executables, configurations, ...
-    tmp            - temporary files of all kind. is deleted periodicly, no backup
-    vrt            - hd-images, containers, iso-files, gerenated start scripts, ...
+|Data Area|Purpose|Server|Comment|
+|---|---|---|---|
+|data|active data (documents, media data, no executables, no configurations)|uranus| |
+|backup|backups of all kind|uranus| |
+|logic|executables|uranus|deprecated -> slag-tools|
+|test|test data, logic and configurations|uranus|deprecated -> slag-tools, slag-configurations|
+|tmp|temporary files of all kind|jupiter| |
+|vrt|VM instance files, logs, generated logic|uranus| |
+|backup-archive|swap for backups, long term backups|jupiter| |
 
 #### 2.1.1 Primary Data Server
-
 Name: uranus
 
-Data-Areas:
- * backup
- * data
- * tmp
- * vrt
-
 Current-Configuration (2020.12):
-* 2x 1 TB
-* RAID 1
-* 900 MiB capacity
 
-#### 2.1.2 Backup Data Server
+|Parameter|Value|
+|---|---|
+|Base Storage Size|1 TB|
+|Base Storage Count|2|
+|RAID|1|
+|Capacity|~900 GiB|
+
+#### 2.1.2 Secondary Data Server
 Name: jupiter
+
+|Parameter|Value|
+|---|---|
+|Base Storage Size|1 TiB|
+|Base Storage Count|2|
+|RAID|1|
+|Capacity|~900 GB|
 
 Data-Areas:
  * backup-archive
 
 Current-Configuration (2020.12):
-* 3x 2 TB
-* RAID 5
-* 3,6 MiB capacity
+|Parameter|Value|
+|---|---|
+|Base Storage Size|2 TiB|
+|Base Storage Count|3|
+|RAID|5|
+|Capacity|3.6 TB|
 
 ### 2.2 VM-Host
 Name: merkur
 
 Current-Configuration (2020.12):
-* CPU: Core2Quad 4400
-* 4 GB RAM
+|Parameter|Value|
+|---|---|
+|CPU|Core2Quad 4400|
+|RAM|4 GiB|
+|HDD|40 GB (for OS)|
 
 ### 2.3 VM-Guests
-Names: Pluto-xx (x stands for an hex value)
 
-There are three configurations depending on what the current vm-host can carry at the same time:
-* large: 1 VM
-* medium: 2 VMs
-* small: 4 VMs
-
-see #Configurations global.properties 'vrt.guest.'-section for exact parameters
+|Size|CPUs|RAM|HDD-Image|
+|---|---|---|---|
+|small|1|512 MiB|8 GB|
+|medium|2|1 GiB|8 GB|
+|large|4|2 GiB|8 GB
 
 ## 3. Tools
 github repo: slag-tools
