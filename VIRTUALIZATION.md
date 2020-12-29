@@ -177,9 +177,9 @@ Beispiel einer *instance.properties*
 
 ### Autostart einer VM
 * autostart erfolgt
-** durch symlink des VM-eigenen Start-Script nach *vrt/autostart*
-** durch symlink des Scripts *slag-tools/bash/vrt/autostart-vms.sh* nach */etc/cron.rebootly/autostart-vms*
-*** das Script enthält eine Warteprozedur, falls das nfs-Laufwerk */mnt/vrt* bei Ausführung durch den cronjob noch nicht eingehängt sein sollte
+  * durch symlink des VM-eigenen Start-Script nach *vrt/autostart*
+  * durch symlink des Scripts *slag-tools/bash/vrt/autostart-vms.sh* nach */etc/cron.rebootly/autostart-vms*
+    * das Script enthält eine Warteprozedur, falls das nfs-Laufwerk */mnt/vrt* bei Ausführung durch den cronjob noch nicht eingehängt sein sollte
 
 ### Stoppen einer VM
 * einfügen einer Datei mit Namen der VM in *vrt/stop*, z.B. durch:
