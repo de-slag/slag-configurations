@@ -51,16 +51,6 @@ Current-Configuration (2020.12):
 #### 2.1.2 Secondary Data Server
 Name: jupiter
 
-|Parameter|Value|
-|---|---|
-|Base Storage Size|1 TiB|
-|Base Storage Count|2|
-|RAID|1|
-|Capacity|~900 GB|
-
-Data-Areas:
- * backup-archive
-
 Current-Configuration (2020.12):
 |Parameter|Value|
 |---|---|
@@ -85,10 +75,12 @@ Current-Configuration (2020.12):
 |---|---|---|---|
 |small|1|512 MiB|8 GB|
 |medium|2|1 GiB|8 GB|
-|large|4|2 GiB|8 GB
+|large|4|2 GiB|8 GB|
 
 ## 3. Tools
 github repo: slag-tools
 
 ## 4. Configurations
 github repo: slag-configurations
+
+
