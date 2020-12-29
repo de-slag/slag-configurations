@@ -1,6 +1,13 @@
 # VIRTUALIZATION
 
-## PRÄMISSEN
+**Table of contents**
+1. [Vorbedingungen](#vorbedingungen)
+2. [Ziel](#ziel)
+2. [Durchführung](#durchführung)
+
+    3.1. [VM-Host](#vm-host)
+
+## Vorbedingungen
 Es werden nur Debian-Stable- und Ubuntu-LTS-Linux-Maschinen virtualisiert. Ein Überblick über die verwendeten Versionen zeigt die folgende Tabelle:
 
 |ab Jahr|Debian|Ubuntu|
@@ -10,7 +17,7 @@ Es werden nur Debian-Stable- und Ubuntu-LTS-Linux-Maschinen virtualisiert. Ein �
 |2021|11| |
 |2024| |24.04|
 
-## ZIEL
+## Ziel
 
 Die Virtualisierung in diesem Kontext soll helfen, schnell virtuelle Maschinen zu erzeugen, die:
 * einfach zu initalisieren sind
@@ -55,9 +62,40 @@ Damit die VMs im home-Netzwerk verfügbar sind, ist eine Netzwerkbrücke auf dem
       log/                  # alle Log-Dateien
 
 ## Ablauf
-0. Installation OS (vrt-install-os-wizard.sh)
-0. Erstellung eines Init-Scriptes (vrt-init-vm-wizard.sh)
-0. Einrichtung einer neuen VM (vrt-install-vm.sh)
+
+*VM-Lifecycle:*
+* Betriebssystem installieren
+* VM instanziieren
+  * Datenstruktur anlegen
+  * HD-Image kopieren
+  * Scripte generieren/kopieren
+  * VM erzeugen
+    * MAC-Adresse als verbraucht registrieren
+    * VM-Namen als verbraucht registrieren 
+  * VM starten
+  * VM initialisieren
+    * Hostnamen setzen
+    * Installation und Konfiguration von Paketen und Anwendungen
+  * VM neu starten
+  * VM als 'erzeugt' markieren
+* VM löschen
+  * VM stoppen
+  * VM zerstören
+  * VM undefinieren 
+  * HD-Image löschen
+  * In Datenstruktur als gelöscht markieren
+* gelöschte VMs aufräumen
+  * Datenstrukturen gelöschter VMs löschen
+
+ 
+
+
+|Schritt|Input|Durchführung|Output|
+|---|---|---|---|
+|Installation OS|Installation-ISO|install-vm-os-wizard.sh|OS-Festpatten-Image|
+|Erstellung Init-Script| |host-setup-wizdard.sh|Init-Script|
+|Erzeugen VM|OS-Festplatten-Image, Init-Script|create-vm.sh|Lauffähige, vorkonfigurierte VM|
+
 
 
 
