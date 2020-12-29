@@ -209,6 +209,17 @@ Beispiel einer *instance.properties*
 ** robust genug um konkurrierende Ausführungen zu verkraften, kein Lock erforderlich
 ** schreibt alle Aktivitäten in *vrt/log/cleanup.log"
 
+## Konfiguration
+
+    vrt.basedir=/mnt/vrt 
+    vrt.guest.sizes=small;medium;large
+    vrt.guest.size.small.cpus=1
+    vrt.guest.size.small.ram=512
+    vrt.guest.size.medium.cpus=2  
+    vrt.guest.size.medium.ram=1024
+    vrt.guest.size.large.cpus=4
+    vrt.guest.size.large.ram=2048
+
 ## Glossar
 
 |Begriff|Bedeutung|
