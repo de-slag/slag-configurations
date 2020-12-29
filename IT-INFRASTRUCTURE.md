@@ -1,6 +1,30 @@
 # IT INFRASTRUCTURE
 ## 1. Network
 ## 2. Servers
+### 2.0 Naming
+#### 2.0.1 Fullsize Servers + NAS
+Planets of Solar System
+
+    merkur  - VM host
+    jupiter - secondary data server
+    uranus  - primary data server
+
+#### 2.0.1 Auxiliary Servers + SoC
+
+Dwarf Planets of Solar System
+
+    ceres - printer server
+
+#### 2.0.3 Virtual Machines
+
+Plutoids
+
+*in tribute that pluto was a planet for 76 years*
+ 
+     pluto-a .. pluto-z    - machines to test VM behaviour
+     pluto-0 .. pluto-nnn  - machines to develop, test and be productive
+
+
 ### 2.1 Data-Servers
 
 *Data Areas*
