@@ -1,6 +1,10 @@
 # Databases
 
-## Naming Strategy
+## table of contents
+1. [Naming Strategy](#naming-strategy)
+2. [Creation](#creation)
+
+## 1. Naming Strategy
 
 12-digits, parted in 4 areas
 
@@ -32,7 +36,7 @@ a hexadecimal numbering
 T_DMO_00_100 - 256th db of an demo application without business context at test stage
 D_REP_AC_007 - 7th db of a reporting application with 'ACME Corp.' as business context at development stage
 
-## CREATION
+## 2. Creation
 
 Default: MariaDB
 
