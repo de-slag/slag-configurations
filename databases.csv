@@ -1,0 +1,3 @@
+DB_NAME;COMMENT
+D_DMO_00_001;initial test docker container on 'draugr-2'
+D_DMO_00_002;initial test docker container on 'merkur'
