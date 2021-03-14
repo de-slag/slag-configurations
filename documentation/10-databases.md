@@ -40,7 +40,11 @@ D_REP_AC_007 - 7th db of a reporting application with 'ACME Corp.' as business c
 
 Default: MariaDB
 
-### Server
+### Docker-Server
+
+Use slag-configuration/docker/mariadb.yml
+
+### Docker-Server (deprecated)
 
 create docker container:
 
