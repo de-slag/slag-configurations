@@ -8,7 +8,7 @@
 * Spring Boot: 2.4.3
 * Packaging: War
 * Java: 11
-* Dependencies: Spring Web, MariaDB Driver, 
+* Dependencies: Spring Web
 
 Next steps:
 * call an index.xhtml
