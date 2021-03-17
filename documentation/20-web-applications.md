@@ -1,6 +1,6 @@
 # Web Applications
 
-## 2-Layers Application with JSF
+## 2-Layers Spring MVC Application running on Apache Tomcat
 
 ### Spring Boot Initializr
 
@@ -16,7 +16,7 @@ Create a Controller and a html-page
   * follow https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-create-a-deployable-war-file
   * remove '/' in index.html like '\<a href="/greeting"\>' to '\<a href="greeting"\>'
 
-## 3-Layers Application with JSF and MariaDB running on Apache Tomcat
+## 3-Layers Spring MVC Application and MariaDB running on Apache Tomcat
 
 ### Spring Boot Initializr
 * Project: Maven Project
