@@ -3,6 +3,7 @@
 ## table of contents
 1. [Naming Strategy](#naming-strategy)
 2. [Creation](#creation)
+3. [Usage](#usage)
 
 ## Naming Strategy
 
@@ -56,4 +57,15 @@ create docker container:
     create database SCHEMA_NAME;
     grant all privileges on SCHEMA_NAME.* TO 'SCHEMA_NAME'@'%' identified by 'PASSWORD';
     flush privileges;
+    
+## Usage
+
+### Tomcat (context.xml)
+
+    <Resource name="jdbc/default" auth="Container" type="javax.sql.DataSource"
+    maxActive="50" maxIdle="30" maxWait="10000"
+    username="D_DMO_00_001" password="password" 
+    driverClassName="org.mariadb.jdbc.Driver"
+    url="jdbc:mysql://draugr-2:3306/D_DMO_00_001"/>
+
 
