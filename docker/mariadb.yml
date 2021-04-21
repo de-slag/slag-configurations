@@ -13,7 +13,7 @@ services:
       MYSQL_ROOT_PASSWORD: example
 
   adminer:
-    image: adminer
+    image: adminer:4.8.0
     restart: always
     ports:
       - 8080:8080
