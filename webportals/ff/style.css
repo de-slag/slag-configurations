@@ -1,0 +1,36 @@
+body {
+  background-color:#162E7B;
+  color: white;
+}
+
+a:link {
+  color: #EEC900;
+}
+
+a:visited {
+  color: #FC0A1C;
+}
+
+h1 {
+  color: black;
+  background-color:f5ff00;
+  text-align:center;
+  font-family: sans-serif;
+}
+
+td {
+  font-family: sans-serif;
+}
+
+table {
+  width: 512px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+footer {
+   text-align: center;
+   font-size:10px;
+   font-family:monospace;
+}
