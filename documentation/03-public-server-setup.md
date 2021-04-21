@@ -7,4 +7,4 @@ See ##-init-git-repos.md
 All preparations and manual todos are listed by script slag-tools/public-server-setup/00-init
 
 ## run install script chain
-    run-parts ~/slag-tools/public-server-setup
+    run-parts --exit-on-error ~/slag-tools/public-server-setup
