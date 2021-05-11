@@ -10,15 +10,31 @@ sudo docker run -t -i ubuntu:focal /bin/bash
 ```
 * run the following commands in docker container
 ```
-echo "y" | unminimize
-apt update
-apt dist-upgrade -y
-apt install git bats rsync nano coreutils -y
-cd ~
-git clone https://github.com/de-slag/slag-tools.git
-git clone https://github.com/de-slag/slag-configurations.git
-
+echo '#!/bin/bash                                                  ' >  /tmp/run-slag-utils-tests.sh
+echo '# CONFIG SECTION                                             ' >> /tmp/run-slag-utils-tests.sh
+echo 'SLAG_TOOLS_BRANCH=0.2-rc                                     ' >> /tmp/run-slag-utils-tests.sh
+echo 'echo "y" | unminimize                                        ' >> /tmp/run-slag-utils-tests.sh
+echo 'apt update                                                   ' >> /tmp/run-slag-utils-tests.sh
+echo 'apt dist-upgrade -y                                          ' >> /tmp/run-slag-utils-tests.sh
+echo 'apt install git bats rsync nano coreutils -y                 ' >> /tmp/run-slag-utils-tests.sh
+echo 'cd ~                                                         ' >> /tmp/run-slag-utils-tests.sh
+echo "# see slag-configurations/documentation/04-init-git-repos.md ' >> /tmp/run-slag-utils-tests.sh
+echo 'git clone https://github.com/de-slag/slag-tools.git          ' >> /tmp/run-slag-utils-tests.sh
+echo 'git clone https://github.com/de-slag/slag-configurations.git ' >> /tmp/run-slag-utils-tests.sh
+echo 'cd ~/slag-tools                                              ' >> /tmp/run-slag-utils-tests.sh
+echo 'git checkout "$SLAG_TOOLS_BRANCH"                            ' >> /tmp/run-slag-utils-tests.sh
+echo 'cd ~/slag-tools/test                                         ' >> /tmp/run-slag-utils-tests.sh
+echo 'bats *.bats                                                  ' >> /tmp/run-slag-utils-tests.sh
+echo
+echo "Check configruation, then save and exit."
+echo (hit ENTER to continue)
+read
+nano /tmp/run-slag-utils-tests.sh
+bash /tmp/run-slag-utils-tests.sh
 ```
+
+## (deprecated)
+
 * init git repos, see https://github.com/de-slag/slag-configurations/blob/master/documentation/04-init-git-repos.md
 * checkout git branch to test, i.e.
 ```
