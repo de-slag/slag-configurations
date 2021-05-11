@@ -25,8 +25,10 @@ echo 'bats *.bats                                                  ' >> /tmp/run
 echo 'bash /tmp/run-slag-utils-tests.sh                            ' >> /tmp/run-slag-utils-tests.sh
 bash /tmp/run-slag-utils-tests.sh
 exit
-sudo docker container rm 
+sudo docker container rm ubuntu-slag-tools-test
 ```
+
+## (deprecated)
 * run the following commands in docker container
 ```
 echo '#!/bin/bash                                                  ' >  /tmp/run-slag-utils-tests.sh
@@ -48,7 +50,7 @@ echo 'bats *.bats                                                  ' >> /tmp/run
 bash /tmp/run-slag-utils-tests.sh
 ```
 
-## (deprecated)
+
 
 * init git repos, see https://github.com/de-slag/slag-configurations/blob/master/documentation/04-init-git-repos.md
 * checkout git branch to test, i.e.
