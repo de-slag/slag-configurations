@@ -26,11 +26,6 @@ echo 'cd ~/slag-tools                                              ' >> /tmp/run
 echo 'git checkout "$SLAG_TOOLS_BRANCH"                            ' >> /tmp/run-slag-utils-tests.sh
 echo 'cd ~/slag-tools/test                                         ' >> /tmp/run-slag-utils-tests.sh
 echo 'bats *.bats                                                  ' >> /tmp/run-slag-utils-tests.sh
-echo ''
-echo "Check configruation, then save and exit."
-echo "(hit ENTER to continue)"
-read
-nano /tmp/run-slag-utils-tests.sh
 bash /tmp/run-slag-utils-tests.sh
 ```
 
