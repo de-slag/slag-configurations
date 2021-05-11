@@ -25,6 +25,7 @@ echo 'bats *.bats                                                  ' >> /tmp/run
 echo 'bash /tmp/run-slag-utils-tests.sh                            ' >> /tmp/run-slag-utils-tests.sh
 bash /tmp/run-slag-utils-tests.sh
 exit
+sudo docker container rm 
 ```
 * run the following commands in docker container
 ```
