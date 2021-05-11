@@ -13,6 +13,8 @@ sudo docker run -t -i ubuntu:focal /bin/bash
 echo '#!/bin/bash                                                  ' >  /tmp/run-slag-utils-tests.sh
 echo '# CONFIG SECTION                                             ' >> /tmp/run-slag-utils-tests.sh
 echo 'SLAG_TOOLS_BRANCH=0.2-rc                                     ' >> /tmp/run-slag-utils-tests.sh
+echo '                                                             ' >> /tmp/run-slag-utils-tests.sh
+echo '# PROGRAM SECTION - do not modify                            ' >> /tmp/run-slag-utils-tests.sh
 echo 'echo "y" | unminimize                                        ' >> /tmp/run-slag-utils-tests.sh
 echo 'apt update                                                   ' >> /tmp/run-slag-utils-tests.sh
 echo 'apt dist-upgrade -y                                          ' >> /tmp/run-slag-utils-tests.sh
@@ -25,7 +27,7 @@ echo 'cd ~/slag-tools                                              ' >> /tmp/run
 echo 'git checkout "$SLAG_TOOLS_BRANCH"                            ' >> /tmp/run-slag-utils-tests.sh
 echo 'cd ~/slag-tools/test                                         ' >> /tmp/run-slag-utils-tests.sh
 echo 'bats *.bats                                                  ' >> /tmp/run-slag-utils-tests.sh
-echo
+echo ''
 echo "Check configruation, then save and exit."
 echo (hit ENTER to continue)
 read
