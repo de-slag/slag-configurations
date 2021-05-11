@@ -25,6 +25,7 @@ git checkout 0.1-rc
 ```
 * run bats tests
 ```
-bats ~/slag-tools/test/*.bats
+cd ~/slag-tools/test
+bats *.bats
 
 ```
