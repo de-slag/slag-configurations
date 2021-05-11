@@ -28,7 +28,7 @@ echo 'cd ~/slag-tools/test                                         ' >> /tmp/run
 echo 'bats *.bats                                                  ' >> /tmp/run-slag-utils-tests.sh
 echo ''
 echo "Check configruation, then save and exit."
-echo (hit ENTER to continue)
+echo "(hit ENTER to continue)"
 read
 nano /tmp/run-slag-utils-tests.sh
 bash /tmp/run-slag-utils-tests.sh
