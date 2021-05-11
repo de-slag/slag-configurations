@@ -12,7 +12,7 @@ sudo docker run -t -i ubuntu /bin/bash
 ```
 apt update
 apt dist-upgrade -y
-apt install git bats -y
+apt install git bats rsync -y
 
 ```
 * init git repos, see https://github.com/de-slag/slag-configurations/blob/master/documentation/04-init-git-repos.md
