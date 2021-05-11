@@ -5,6 +5,7 @@
 
 ```
 sudo apt install docker.io
+sudo docker run -t -i ubuntu:focal /bin/bash
 echo '#!/bin/bash                                                  ' >  /tmp/run-slag-utils-tests.sh
 echo '# CONFIG SECTION                                             ' >> /tmp/run-slag-utils-tests.sh
 echo 'SLAG_TOOLS_BRANCH=0.2-rc                                     ' >> /tmp/run-slag-utils-tests.sh
@@ -22,7 +23,7 @@ echo 'git checkout "$SLAG_TOOLS_BRANCH"                            ' >> /tmp/run
 echo 'cd ~/slag-tools/test                                         ' >> /tmp/run-slag-utils-tests.sh
 echo 'bats *.bats                                                  ' >> /tmp/run-slag-utils-tests.sh
 echo 'bash /tmp/run-slag-utils-tests.sh                            ' >> /tmp/run-slag-utils-tests.sh
-sudo docker run -t -i ubuntu:focal /bin/bash /tmp/run-slag-utils-tests.sh
+bash /tmp/run-slag-utils-tests.sh
 
 ```
 * run the following commands in docker container
