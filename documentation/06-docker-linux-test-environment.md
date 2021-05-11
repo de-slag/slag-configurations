@@ -4,8 +4,8 @@
 * install docker (if any) and setup linux host: 
 
 ```
-apt install docker.io
-docker run -t -i ubuntu /bin/bash
+sudo apt install docker.io
+sudo docker run -t -i ubuntu /bin/bash
 ```
 * run the following commands in docker container
 ```
