@@ -4,20 +4,22 @@
 * install docker (if any) and setup linux host: 
 
 ```
+#!/bin/bash
+set -x -o pipefail
 sudo apt install docker.io
 sudo docker run --name ubuntu-slag-tools-test -t -i ubuntu:focal /bin/bash
 echo "y" | unminimize
-apt update                                                   
-apt dist-upgrade -y                                          
+apt update
+apt dist-upgrade -y
 apt install git bats rsync nano coreutils -y
 read
-cd                                                
-git clone https://github.com/de-slag/slag-tools.git 
+cd
+git clone https://github.com/de-slag/slag-tools.git
 git clone https://github.com/de-slag/slag-configurations.git
-cd ~/slag-tools                                             
+cd ~/slag-tools
 git checkout 0.2-rc
-cd ~/slag-tools/test                                         
-bats *.bats                                                  
+cd ~/slag-tools/test
+bats *.bats
 exit
 sudo docker container rm ubuntu-slag-tools-test
 ```
