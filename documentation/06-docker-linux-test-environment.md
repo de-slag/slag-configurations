@@ -10,7 +10,7 @@ echo "y" | unminimize
 apt update                                                   
 apt dist-upgrade -y                                          
 apt install git bats rsync nano coreutils -y
-cd ~                                                
+cd                                                
 git clone https://github.com/de-slag/slag-tools.git 
 git clone https://github.com/de-slag/slag-configurations.git
 cd ~/slag-tools                                             
