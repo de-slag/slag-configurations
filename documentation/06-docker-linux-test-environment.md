@@ -5,14 +5,15 @@
 
 ```
 sudo apt install docker.io
-sudo docker run -t -i ubuntu /bin/bash
+sudo docker run -t -i ubuntu:focal /bin/bash
 
 ```
 * run the following commands in docker container
 ```
+echo "y" | unminimize
 apt update
 apt dist-upgrade -y
-apt install git bats rsync -y
+apt install git bats rsync coreutils -y
 
 ```
 * init git repos, see https://github.com/de-slag/slag-configurations/blob/master/documentation/04-init-git-repos.md
