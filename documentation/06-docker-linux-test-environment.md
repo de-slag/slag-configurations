@@ -20,7 +20,6 @@ echo 'apt update                                                   ' >> /tmp/run
 echo 'apt dist-upgrade -y                                          ' >> /tmp/run-slag-utils-tests.sh
 echo 'apt install git bats rsync nano coreutils -y                 ' >> /tmp/run-slag-utils-tests.sh
 echo 'cd ~                                                         ' >> /tmp/run-slag-utils-tests.sh
-echo "# see slag-configurations/documentation/04-init-git-repos.md ' >> /tmp/run-slag-utils-tests.sh
 echo 'git clone https://github.com/de-slag/slag-tools.git          ' >> /tmp/run-slag-utils-tests.sh
 echo 'git clone https://github.com/de-slag/slag-configurations.git ' >> /tmp/run-slag-utils-tests.sh
 echo 'cd ~/slag-tools                                              ' >> /tmp/run-slag-utils-tests.sh
