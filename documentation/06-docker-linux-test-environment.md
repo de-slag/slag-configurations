@@ -14,6 +14,9 @@ echo "y" | unminimize
 apt update
 apt dist-upgrade -y
 apt install git bats rsync coreutils -y
+cd ~
+git clone https://github.com/de-slag/slag-tools.git
+git clone https://github.com/de-slag/slag-configurations.git
 
 ```
 * init git repos, see https://github.com/de-slag/slag-configurations/blob/master/documentation/04-init-git-repos.md
