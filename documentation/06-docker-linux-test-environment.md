@@ -10,6 +10,7 @@ sudo docker run -t -i ubuntu /bin/bash
 ```
 * run the following commands in docker container
 ```
+unminimize
 apt update
 apt dist-upgrade -y
 apt install git bats rsync -y
