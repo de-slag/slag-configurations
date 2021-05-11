@@ -21,8 +21,8 @@ echo 'cd ~/slag-tools                                              ' >> /tmp/run
 echo 'git checkout "$SLAG_TOOLS_BRANCH"                            ' >> /tmp/run-slag-utils-tests.sh
 echo 'cd ~/slag-tools/test                                         ' >> /tmp/run-slag-utils-tests.sh
 echo 'bats *.bats                                                  ' >> /tmp/run-slag-utils-tests.sh
-bash /tmp/run-slag-utils-tests.sh
-sudo docker run -t -i ubuntu:focal /bin/bash //tmp/run-slag-utils-tests.sh
+echo 'bash /tmp/run-slag-utils-tests.sh                            ' >> /tmp/run-slag-utils-tests.sh
+sudo docker run -t -i ubuntu:focal /bin/bash /tmp/run-slag-utils-tests.sh
 
 ```
 * run the following commands in docker container
